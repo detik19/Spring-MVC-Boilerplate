@@ -1,21 +1,19 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
-<html>
-<head>
-<title>Taskify :: Home</title>
-</head>
-<body>
-	<h1>Welcome to Taskify!</h1>
-	<hr />
-<%-- 	<P>There are ${totalOpenTasks}(${totalTasks}) open tasks.</P> --%>
- 	<hr />
-	<h4>This is a Spring MVC Starter Project. You can use this to
-		quickly get your application up and running.</h4>
-	<p>You may start by changing your application name, package names
-		etc. for your convenience.</p>
-	<p>Don't forget to update &lt;context:component-scan
-		base-package="com.taskify" /&gt; inside servlet-context.xml.</p>
-	</p>
+<!-- Page Content -->
+<div class="container">
 
-</body>
-</html>
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<h1>A Bootstrap Starter Template</h1>
+			<p class="lead">Complete with pre-defined file paths that you
+				won't have to change!!</p>
+			<ul class="list-unstyled">
+				<li>Bootstrap v3.3.7</li>
+				<li>jQuery v1.11.1</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /.row -->
+
+</div>

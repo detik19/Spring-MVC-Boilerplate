@@ -25,7 +25,7 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<context:component-scan base-package="com.embeddednesia.web" />
+	<context:component-scan base-package="com.embeddednesia.springmvc" />
 	<bean id="multipartResolver" class="org.hdiv.web.multipart.HdivCommonsMultipartResolver">
 	</bean>
 </beans>

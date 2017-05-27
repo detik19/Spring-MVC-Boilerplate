@@ -1,4 +1,4 @@
-package com.embeddednesia.web.controllers;
+package com.embeddednesia.springmvc.web.controllers;
 
 import java.util.Locale;
 

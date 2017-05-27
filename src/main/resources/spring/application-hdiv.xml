@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hdiv="http://www.hdiv.org/schema/hdiv"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.hdiv.org/schema/hdiv http://www.hdiv.org/schema/hdiv/hdiv.xsd">
+
+	<hdiv:config 
+		errorPage="/error.html" 
+		confidentiality="true"
+		maxPagesPerSession="5"
+		protectedExtensions="jrxml"
+		debugMode="false"
+		userData="userData"
+		avoidValidationInUrlsWithoutParams="true">
+		<hdiv:sessionExpired loginPage="/index.html" homePage="/"/>
+	    <hdiv:startPages method="get">/,/index.html,/logout.html</hdiv:startPages>
+		<hdiv:startPages method="post">/j_spring_security_check</hdiv:startPages>
+	</hdiv:config>
+	
+	<hdiv:editableValidations registerDefaults="true">
+		<hdiv:validationRule url="a" enableDefaults="true">id1</hdiv:validationRule>
+	</hdiv:editableValidations>
+	
+	<hdiv:validation id="id1" componentType="text">
+		<hdiv:acceptedPattern><![CDATA[^[a-zA-Z0-9@.\-_]*$]]></hdiv:acceptedPattern>
+		<hdiv:rejectedPattern><![CDATA[(\s|\S)*(--)(\s|\S)*]]></hdiv:rejectedPattern>
+	</hdiv:validation>
+	
+	<bean id="userData" class="com.embeddednesia.web.model.User"/>
+	
+</beans>

@@ -10,6 +10,7 @@
 	<!-- DispatcherServlet Context: defines this servlet's request-processing 
 		infrastructure -->
 
+
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<mvc:annotation-driven validator="hdivEditableValidator" />
 
@@ -25,7 +26,7 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<context:component-scan base-package="com.embeddednesia.springmvc" />
+	<context:component-scan base-package="com.embeddednesia.springmvc.web" />
 	<bean id="multipartResolver" class="org.hdiv.web.multipart.HdivCommonsMultipartResolver">
 	</bean>
 </beans>

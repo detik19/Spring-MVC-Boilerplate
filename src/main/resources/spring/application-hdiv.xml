@@ -26,6 +26,6 @@
 		<hdiv:rejectedPattern><![CDATA[(\s|\S)*(--)(\s|\S)*]]></hdiv:rejectedPattern>
 	</hdiv:validation>
 	
-	<bean id="userData" class="com.embeddednesia.springmvc.web.model.User"/>
+	<bean id="userData" class="com.embeddednesia.springmvc.model.User"/>
 	
 </beans>

@@ -18,6 +18,16 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
+	<listener>
+		<listener-class>org.hdiv.listener.InitListener</listener-class>
+	</listener>
+	
+	<listener>
+    	<listener-class>
+        	org.springframework.web.context.request.RequestContextListener
+    	</listener-class>
+  </listener>
+  
 	<!-- Processes application requests -->
 	<servlet>
 		<servlet-name>dispatcherServlet</servlet-name>
@@ -41,25 +51,18 @@
 		<!-- <dispatcher>FORWARD</dispatcher> -->
 	</filter-mapping>
 
-	<listener>
-		<listener-class>org.hdiv.listener.InitListener</listener-class>
-	</listener>
-	
-	<listener>
-    	<listener-class>
-        	org.springframework.web.context.request.RequestContextListener
-    	</listener-class>
-  </listener>
 	
 	<!-- Hdiv Validator Filter -->
 	<filter>
 		<filter-name>ValidatorFilter</filter-name>
 		<filter-class>org.hdiv.filter.ValidatorFilter</filter-class>
 	</filter>
+	
 	<filter-mapping>
 		<filter-name>ValidatorFilter</filter-name>
 		<servlet-name>dispatcherServlet</servlet-name>
 	</filter-mapping>
+	
 	<servlet-mapping>
 		<servlet-name>dispatcherServlet</servlet-name>
 		<url-pattern>*.html</url-pattern>

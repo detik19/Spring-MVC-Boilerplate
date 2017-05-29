@@ -11,8 +11,19 @@
 		</div>
 		<div class="panel-body">
 
-			<form:form action="new" method="post">
-				
+			<form:form action="new.html" method="post" modelAttribute="user">
+				<div class="form-group">
+						<label for="txtName">Full Name</label> 
+						<form:input path="name" 
+							class="form-control" id="txtName" placeholder="Full Name"/>
+					</div>
+					<div class="form-group">
+						<label for="txtPassword">Password</label> 
+						<form:input path="password" type="password"
+							class="form-control" id="txtPassword" placeholder="Password"/>
+					</div>
+					
+					<button type="submit" class="btn btn-success">Save</button>
 			</form:form>
 		</div>
 	</div>
